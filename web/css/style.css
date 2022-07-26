@@ -1,0 +1,135 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 23 juil. 2022, 02:23:10
+    Author     : niam
+*/
+@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@100;300;400;600 & display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    text-decoration: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /*background: linear-gradient(to top left, #1e9b74, #7dd56f);*/
+    background: #f2f2f2;
+}
+
+.container_form{
+    background: #fff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+.form_section {
+    padding: 30px 30px;
+}
+.form_section header{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: center;
+}
+.form_section form{
+    margin: 20px 0;
+}
+.form_section form .form_champ{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.form_section form label{
+    margin-bottom: 2px;
+}
+.form_section form .input input{
+    height: 40px;
+    width: 95%;    
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form_section form .boutton input{
+    margin-top: 13px;
+    height: 45px;
+    width: 100%;
+    border:none;
+    font-size: 17px;
+    font-weight: 400;   
+    background: #1e9b74;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form_section form .boutton2 a{
+    margin-top: 13px;
+    height: 45px;
+    width: 100%;
+    border:1px solid #1e9b74;
+    font-size: 17px;
+    font-weight: 400;   
+    background: #ffffff;
+    color: #1e9b74;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_section form .boutton input:hover{
+    background: #FEA735;
+}
+.form_section form .boutton2 a:hover{
+    background: #FEA735;
+    color: #fff;
+    border: none;
+}
+.container_accueil{
+    background: #fff;
+    width: 80%;
+    height: 600px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+   
+}
+.container_accueil h3{
+    padding-left: 20px;
+}
+.hometitle h1{
+    text-align: center;
+    padding-top: 10px;
+}
+.menu nav ul {
+    position: relative;
+    right: -75%;
+    top:-30px;
+    
+}
+.activPseudo{
+    background: red;
+}
+.activPseudo a{
+    color:#fff;
+}
+.menu ul li {
+    display: inline-block;
+    flex-direction: row;
+    padding: 10px;
+}
+.menu ul li a{
+    list-style-type: none;
+    color:black;
+    text-align: right;
+}
+
