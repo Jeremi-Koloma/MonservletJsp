@@ -22,6 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     </head>
     <body>
         
+        <div class="contenueInscripIform">
         <div class="container_form" >
             <section class="form_section">
                 <header>
@@ -52,7 +53,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </section>
         </div>
         
-       
+        </div>
     </body>
 </html>
 

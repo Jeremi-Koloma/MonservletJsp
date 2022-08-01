@@ -11,19 +11,134 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
     text-decoration: none;
-}
-body{
     font-family: 'Poppins', sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/Banner_background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    color: #fff;
+    
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0; /* on cache pour le moment */
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #FEA735;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.contenu{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    color: #fff;
+}
+.contenu h1{
+    font-size: 50px;
+    
+}
+.contenu p{
+    margin: 5px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+.btnliste button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #FEA735;
+    background: transparent;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Error message boutton */
+.errormessage{
+    margin-top: 5px;
+    padding: 0.45rem;
+    background: #F9D7DA;
+    color: #B3656E;
+    font-weight: 600;
+    border-radius: 5px;
+    
+    animation-name: errorMsgAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-direction: forwards;
+    animation-play-state: running;
+    
+}
+/* Error message animation name*/
+@keyframes errorMsgAnim{
+    0%{
+       background-color: #ffffff;
+    }
+    25%{
+        background-color: #F9D7DA;
+    }
+    
+    100%{ 
+        background-color: #F9D7DA;
+    }
+}
+
+
+/* icon alerte */
+.fa-warning:before, .fa-exclamation-triangle:before {
+    content: "\f071";
+    font-size: 20px;
+}
+/* icon se connecter*/
+.fa-sign-in:before {
+    content: "\f090";
+    padding: 10px;
+    font-size: 20px;
+}
+.contenueInscripIform{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    /*background: linear-gradient(to top left, #1e9b74, #7dd56f);*/
-    background: #f2f2f2;
 }
-
 .container_form{
     background: #fff;
     width: 450px;
@@ -94,42 +209,109 @@ body{
     color: #fff;
     border: none;
 }
-.container_accueil{
-    background: #fff;
-    width: 80%;
-    height: 600px;
-    border-radius: 16px;
-    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
-                0 32px 64px -48px rgba(0,0,0,0.5);
-   
-}
-.container_accueil h3{
-    padding-left: 20px;
-}
-.hometitle h1{
-    text-align: center;
-    padding-top: 10px;
-}
-.menu nav ul {
-    position: relative;
-    right: -75%;
-    top:-30px;
-    
-}
+
 .activPseudo{
-    background: red;
-}
-.activPseudo a{
-    color:#fff;
-}
-.menu ul li {
-    display: inline-block;
-    flex-direction: row;
-    padding: 10px;
-}
-.menu ul li a{
-    list-style-type: none;
-    color:black;
-    text-align: right;
+    background: #1e9b74;
+    height: 40px;
+    padding-top: 12px;
+    width: 150px;
+    margin: 20px 20px;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: default;
 }
 
+.activPseudo:hover, .activPseudo a:hover{
+    cursor: default;
+}
+
+h1 > span{
+    color: #FEA735;
+}
+.listPersonCover{
+   display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hidden{
+    display: none;
+}
+
+.listePersonseContainer {
+    background: #F2F2F2;
+    width: 450px;
+    height: 500px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 50%);
+    flex-direction: column;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-top: -442px;
+    padding-bottom: 20px;
+    display: inline-block;
+    z-index: 5;
+}
+
+.btnClose{
+    z-index: 10;
+    position: relative;
+    top: -366px;
+    right: -164px;
+}
+
+.fa-remove:before, .fa-close:before, .fa-times:before {
+    content: "\f00d";
+    font-size: 32px;
+    top: 32px;
+    cursor: pointer;
+    border: none;
+    color: orange;
+    
+}
+    
+.listePersonseContainer{
+    background: #F2F2F2;
+    width: 450px;
+    height: 530px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 50%);
+    flex-direction: column;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-top: -442px;
+    padding-bottom: 20px;
+    /* display: none; */
+    display: inline-block;
+}
+.personneListe{
+    background-color: #fff;
+    margin: 5px;
+    text-align: left;
+    width: 85%;
+    padding: 10px;
+    margin-left: 18px;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: -8px;
+}
+.personneListe p, .personneListe span{
+    color:black;
+}
+.personneListe:hover{
+    background: rgb(255, 247, 202);
+}
+.flux {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
